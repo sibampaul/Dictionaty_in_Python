@@ -15,9 +15,12 @@ def dictionary(word):
             print("%s means : \n" %word)
             return data[get_close_matches(word,data.keys())[0]]
         else:
-            return "No such word exists in this Dictionary"
+            print("No such word exists in this Dictionary\n")
+            repeat()
     else:
-        return "No such word exists in this Dictionary"
+        print("No such word exists in this Dictionary\n")
+        repeat()
+
 def output():
     word = input("Enter the word : ")
     for items in dictionary(word):
@@ -29,5 +32,5 @@ def repeat():
     if repeat == 'Y' or repeat == 'y':
         output()
     else:
-        pass
+        exit()
 output()
